@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+	<style type="text/css">
+	html, body {
+    	overflow: hidden;
+    	margin: 0 !important;
+    	padding: 0 !important;
+		color: white;
+	}
+	canvas {
+        image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+        image-rendering: -moz-crisp-edges;          /* Firefox                        */
+        image-rendering: -o-crisp-edges;            /* Opera                          */
+        image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+        image-rendering: pixelated; /* Chrome */
+        image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+        -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+      }
+	  
+	.container {
+		position: relative;
+	}
+	 
+	#text {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		z-index: 10;
+	}
+	</style>
+	</head>
+	<body>
+		<div class="container">
+			<!canvas tabindex="1" width = "1366" height = "768" id = "glcanvas"><!/canvas>
+			<!canvas width = "1366" height = "768" id = "text"><!/canvas>
+			
+			<canvas tabindex="1" width = "1366" height = "668" id = "glcanvas"></canvas>
+			<canvas width = "1366" height = "668" id = "text"></canvas>
+			
+			<!canvas tabindex="1" width = "1920" height = "1080" id = "glcanvas"><!/canvas>
+			<!canvas tabindex="1" width = "1920" height = "1080" id = "text"><!/canvas>
+		</div>
+		<script src="definitions.js"></script>
+		
+		<script src="core/queue.js"></script>
+		<script src="core/maths.js"></script>
+		<script src="core/camera.js"></script>
+		<script src="core/mesh.js"></script>
+		<script src="core/texture.js"></script>
+		<script src="core/shader.js"></script>
+		<script src="core/canvas2d.js"></script>
+		<script src="core/atlas.js"></script>
+		<script src="core/batch.js"></script>
+		
+		<script src="lighting.js"></script>
+		<script src="chunks.js"></script>
+		<script src="texgen.js"></script>
+		<script src="physics.js"></script>
+		<script src="assets.js"></script>
+		<script src="mainloop.js"></script>
+	</body>
+</html>
